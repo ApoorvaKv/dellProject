@@ -1,0 +1,65 @@
+
+	USERNAME : root
+	PASSWORD : password
+	DATABASE : Notification
+
+------------------------------------------------------------------------------------------
+
+1.Create db :-
+	create database Notification;
+	
+	use Notification;
+
+--------------------------------------------------------------------------------------
+
+2.db for Feedback :-
+	create table feedback
+	(
+		email varchar(50) not null,
+		feedback varchar(500)
+	);
+
+----------------------------------------------------------------------------------------
+
+3.db for Zilla Panchayat Officer :-
+	create table registration(
+		rid int not null unique auto_increment,
+		fname varchar(45),
+		lname  varchar(45),
+		phone_no varchar(45),
+		email_id varchar(50) unique,
+		password varchar(45) unique,
+		confirmpassword varchar(45) unique,
+		country_name varchar(45),
+		state_name varchar(45),
+		city_name varchar(45),
+		primary key(rid),
+	);
+
+-------------------------------------------------------------------------------------------
+
+4.db for Farmer :-
+	create table finfo
+	(
+		fid int NOT NULL UNIQUE AUTO_INCREMENT,
+		fname varchar(20) NOT NULL,	
+		mname varchar(20) ,	
+		lname varchar(20) NOT NULL,	
+		phone_no numeric(11) NOT NULL UNIQUE,
+		dob varchar(45) NOT NULL,	
+		state_name varchar(20) NOT NULL,	
+		district_name varchar(20) NOT NULL,
+		taluk_name varchar(20) NOT NULL,	
+		email_id varchar(20),	
+		primary key(fid)
+	);
+
+--------------------------------------------------------------------------------------------
+
+5.db for Schemes :-
+	create table scheme(
+		scheme_id int NOT NULL primary key,
+		scheme_name varchar(150) NOT NULL	
+	);
+
+---------------------------------------------------------------------------------------------
